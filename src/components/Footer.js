@@ -1,4 +1,3 @@
-import { Google, Instagram, LinkedIn } from '@mui/icons-material'
 import { AppBar, Box, IconButton, Stack, Toolbar, Tooltip, Typography } from '@mui/material'
 import React from 'react'
 
