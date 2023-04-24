@@ -14,15 +14,19 @@ const Navbar = () => {
         setDrawerOpen(false)
     }
 
+    const toggleDrawer = () => {
+        setDrawerOpen(prev => !prev)
+    }
+
     return (
-        <AppBar position='static' sx={{ flexGrow: 0}}>
+        <AppBar position='static' sx={{ flexGrow: 0, zIndex: (theme) => theme.zIndex.drawer + 1 }}>
             <Toolbar>
                 <IconButton 
                     size='large'
                     edge="start"
                     color='inherit'
                     sx={{ mr: 2 }}
-                    onClick={handleDrawerOpen}
+                    onClick={toggleDrawer}
                 >
                     <MenuIcon />
                 </IconButton>

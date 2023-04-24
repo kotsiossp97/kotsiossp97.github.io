@@ -1,6 +1,6 @@
-import { Box, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, SwipeableDrawer, ToggleButton, ToggleButtonGroup } from '@mui/material'
+import { Box, Divider, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, SwipeableDrawer, ToggleButton, ToggleButtonGroup, Toolbar, Typography } from '@mui/material'
 import React from 'react'
-import { LightMode, SettingsBrightness, DarkMode } from '@mui/icons-material';
+import { LightMode, SettingsBrightness, DarkMode, Close, GitHub } from '@mui/icons-material';
 import { useStateContext } from '../context/ApplicationContext';
 import Links from '../static/Links';
 
@@ -17,7 +17,9 @@ const MenuDrawer = (props) => {
     const { theme, setTheme, activeLink, setActiveLink } = useStateContext();
 
     const handleThemeChange = (event, newTheme) =>{
-        setTheme(newTheme)
+        if(newTheme !== null){
+            setTheme(newTheme)
+        }
     }
 
     const handleLinkClick = (event, newIndex) =>{
@@ -31,13 +33,22 @@ const MenuDrawer = (props) => {
             anchor="left"
             onClose={handleClose}
             onOpen={handleOpen}
-            sx={{ marginX: 10}}
+            sx={{ marginX: 10, }}
             disableSwipeToOpen={false}
         >
+            <Toolbar />
             <Box
                 sx={{ width: "auto", marginX: 3, marginTop:3}}
             >
-                <List subheader="LINKS">
+                <List >
+                    <ListItem disablePadding >
+                        <Box sx={{ display: 'flex', width:"100%"}} alignItems="center" justifyContent="space-between">
+                            <Typography>NAVIGATION</Typography>
+                            <IconButton onClick={handleClose}>
+                                <Close />
+                            </IconButton>
+                        </Box>
+                    </ListItem>
                     {Links.map((link, index) => (
                         <ListItem key={link.name}>
                             <ListItemButton href={link.href} selected={activeLink === index} onClick={(ev)=>handleLinkClick(ev,index)}>
@@ -61,6 +72,16 @@ const MenuDrawer = (props) => {
                             </ToggleButtonGroup>
 
                         </Box>
+                    </ListItem>
+                </List>
+
+                <Divider sx={{ marginBottom: 2}}/>
+                <List subheader="ABOUT">
+                    <ListItem>
+                        <ListItemButton href='https://github.com/kotsiossp97/kotsiossp97.github.io' target='_blank'>
+                            <ListItemIcon><GitHub /></ListItemIcon>
+                            <ListItemText>View Page Source Code</ListItemText>
+                        </ListItemButton>
                     </ListItem>
                 </List>
 
