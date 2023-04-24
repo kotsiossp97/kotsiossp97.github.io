@@ -15,9 +15,9 @@ const SocialLinks = [
     },
     {
         name: "instagram",
-        href: "Follow me on Instagram",
+        href: "https://www.instagram.com/kotsios.andr/",
         icon: <Instagram fontSize='large' />,
-        tooltip: "https://www.instagram.com/kotsios.andr/",
+        tooltip: "Follow me on Instagram",
     },
     {
         name: "gmail",
