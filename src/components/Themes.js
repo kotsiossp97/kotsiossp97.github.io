@@ -3,7 +3,7 @@ import { createTheme, responsiveFontSizes  } from "@mui/material";
 
 const myPalette = {
     primary: "#fcaf25",
-    secondary: "#4900e6"
+    secondary: "#EAB464"
 }
 
 export const darkTheme = responsiveFontSizes(createTheme({

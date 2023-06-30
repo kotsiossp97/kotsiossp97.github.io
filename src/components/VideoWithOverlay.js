@@ -36,8 +36,8 @@ const VideoWithOverlay = (props) => {
             <img src={CodeImg} alt='code' height="100%" style={{objectFit: "cover", overflow: "hidden"}} ></img>
             <Box display="flex" justifyContent="center" position="absolute" bottom="50%" left="0" width="100%">
                 <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-                    <Typography variant='h3' fontWeight="bold">{props.title}</Typography>
-                    <Typography variant="h7" noWrap color="inherit" >{props.subtitle}</Typography>
+                    <Typography className='glow' variant='h3' color="primary.main" fontWeight="bold">{props.title}</Typography>
+                    <Typography className='glow'  variant="h7" color="secondary.light" noWrap >{props.subtitle}</Typography>
                 </Box>
             </Box>
           </>

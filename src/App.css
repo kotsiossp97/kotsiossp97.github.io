@@ -1,3 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.glow {
+    color: black !important;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fcaf25, 0 0 4px #fcaf25, 0 0 5px #fcaf25, 0 0 6px #fcaf25, 0 0 7px #fcaf25;
+    }
+    to {
+      text-shadow: 0 0 2px #fff, 0 0 3px #EAB464, 0 0 4px #EAB464, 0 0 5px #EAB464, 0 0 6px #EAB464, 0 0 7px #EAB464, 0 0 8px #EAB464;
+    }
+  }
