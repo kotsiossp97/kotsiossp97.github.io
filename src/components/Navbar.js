@@ -25,18 +25,18 @@ const Navbar = () => {
                     size='large'
                     edge="start"
                     color='inherit'
-                    sx={{ mr: 2 }}
+                    sx={{ mr: 1 }}
                     onClick={toggleDrawer}
                 >
                     <MenuIcon />
                 </IconButton>
                 <Box sx={{flexGrow: 1}}>
-                    <Typography component="a" href='' sx={{textDecoration: 'none', color: 'inherit',}} marginRight={2} variant='h3' fontFamily='Nanum Brush Script'>My Portfolio</Typography>
+                    <Typography component="a" href='#' fontFamily="Alkatra" sx={{textDecoration: 'none'}} marginRight={2} variant='h4' >My Portfolio</Typography>
 
                 </Box>
 
                 <Box sx={{flexGrow: 0}}>
-                    <Typography  fontFamily='Nanum Brush Script' variant='h4'>Konstantinos Andreou</Typography>
+                    <Typography fontFamily="Alkatra" variant='h4'>Konstantinos Andreou</Typography>
                 </Box>
             </Toolbar>
 

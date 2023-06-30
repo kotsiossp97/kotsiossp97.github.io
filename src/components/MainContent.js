@@ -3,7 +3,7 @@ import React from 'react'
 
 const MainContent = (props) => {
   return (
-    <Box flexGrow={1}>
+    <Box display="flex" flexGrow={1} >
         {props.children}
     </Box>
   )

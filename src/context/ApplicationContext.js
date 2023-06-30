@@ -1,21 +1,29 @@
-import { useState, createContext, useContext } from "react";
+import { useState, createContext, useContext, useEffect } from "react";
 import { lightTheme, darkTheme } from "../components/Themes";
 import Links from "../static/Links";
+import useLocation from "./useLocation";
 
 const StateContext = createContext();
 
-export const ContextProvider = ({children}) => {
-    const currentUrlHash = () => {
-        if(window.location.hash){
-            const link = Links.filter( link => link.href === window.location.hash)
-            return link.length ? Links.indexOf(link[0]) : 0
-        }
-        else{
-            return 0
-        }
+const currentUrlHash = (currentHash) => {
+    if(currentHash){
+        const link = Links.filter( link => link.href === currentHash)
+        return link.length ? Links.indexOf(link[0]) : 0
     }
+    else{
+        return 0
+    }
+}
+
+export const ContextProvider = ({children}) => {
+    const hash = useLocation();
+    
     const [theme, setTheme] = useState('system')
-    const [activeLink, setActiveLink] = useState(currentUrlHash())
+    const [activeLink, setActiveLink] = useState(currentUrlHash(hash))
+
+    useEffect(()=>{
+        setActiveLink(currentUrlHash(hash))
+    }, [hash])
 
     const getMuiTheme = ()=>{
 
