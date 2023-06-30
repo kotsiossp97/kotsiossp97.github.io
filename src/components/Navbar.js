@@ -36,7 +36,7 @@ const Navbar = () => {
                 </Box>
 
                 <Box sx={{flexGrow: 0}}>
-                    <Typography fontFamily="Alkatra" variant='h4'>Konstantinos Andreou</Typography>
+                    <Typography fontFamily="Alkatra" align='right' variant='h4'>Konstantinos Andreou</Typography>
                 </Box>
             </Toolbar>
 

@@ -7,7 +7,7 @@ import ProjectCard from '../components/ProjectCard'
 const ProjectsPage = () => {
   return (
     <PageContent title="My Projects">
-      <Grid marginTop={3} container spacing={4} columns={1} justifyContent="center"  >
+      <Grid marginTop={3} container spacing={4} justifyContent="center"  >
 
         {MyProjects.map( project => (
           <Grid key={project.title} item xs>

@@ -3,7 +3,7 @@ import React from 'react'
 
 const PageContent = (props) => {
   return (
-    <Container sx={{paddingTop: 4}} maxWidth="xl" >
+    <Container sx={{paddingTop: 4, paddingBottom: 15}} maxWidth="xl" >
       <Typography color="primary.main" fontWeight="bold" variant='h3' gutterBottom>{props.title}</Typography>
       <Divider />
        {props.children}
