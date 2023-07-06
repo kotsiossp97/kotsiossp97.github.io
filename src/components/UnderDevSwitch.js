@@ -8,7 +8,7 @@ const UnderDevSwitch = (props) => {
     return (
         isUnderDev?
             <Box flexGrow={1} alignItems="center"  display="flex" justifyContent="center" flexDirection="column" >
-                    <Typography variant='h2' textAlign="center">🚧 Under development... 🚧</Typography>
+                <Typography variant='h2' textAlign="center">🚧 Under development... 🚧</Typography>
             </Box>:renderComp
     )
 }

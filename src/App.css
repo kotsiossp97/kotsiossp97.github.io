@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
 .glow {
     color: black !important;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -13,3 +15,8 @@
       text-shadow: 0 0 2px #fff, 0 0 3px #EAB464, 0 0 4px #EAB464, 0 0 5px #EAB464, 0 0 6px #EAB464, 0 0 7px #EAB464, 0 0 8px #EAB464;
     }
   }
+
+.boxShadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: solid rgba(0, 0, 0, 0.12) 1px;
+}

@@ -26,7 +26,7 @@ export const MyProjects = [
     },
     {
         title: "Portfolio Webpage",
-        description: "As part of my React learning path, I've decided to build my portfolio website using React. It is the current page you are viewing 😋",
+        description: "As part of my React learning path, I've decided to build my portfolio website using ReactJS framework. It is the current page you are viewing😋.",
         link: "https://github.com/kotsiossp97/kotsiossp97.github.io",
         date: "July 03, 2023"
     }

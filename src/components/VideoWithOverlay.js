@@ -26,14 +26,14 @@ const VideoWithOverlay = (props) => {
   }, [screenSize])
 
   return (
-    <Box display="flex" alignItems="center" flexGrow={1} flexDirection="column" bgcolor="#121212">
-      <Box flexGrow={1} display="flex" alignItems="center" maxWidth="95vw" >
-        { showVideo && <video  height="100%"  src={props.videoSrc} autoPlay loop muted playsInline style={{ objectFit: "cover", overflow: "hidden"}}/>}
+    <Box display="flex" alignItems="center" flexGrow={1} flexDirection="column" bgcolor="#121212" >
+      <Box flexGrow={1} display="flex" alignItems="center">
+        { showVideo && <video  width="100%"  src={props.videoSrc}  autoPlay loop muted playsInline style={{ objectFit: "cover", overflow: "hidden"}}/>}
 
         
         { !showVideo && 
           <>
-            <img src={CodeImg} alt='code' height="100%" style={{objectFit: "cover", overflow: "hidden"}} ></img>
+            <img src={CodeImg} alt='code' height="100%" width="100%" style={{objectFit: "cover", overflow: "hidden"}} ></img>
             <Box display="flex" justifyContent="center" position="absolute" bottom="50%" left="0" width="100%">
                 <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                     <Typography className='glow' variant='h3' color="primary.main" fontWeight="bold">{props.title}</Typography>

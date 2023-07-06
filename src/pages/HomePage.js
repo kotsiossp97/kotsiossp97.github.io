@@ -1,17 +1,19 @@
-import { Box, Button } from '@mui/material'
+import { Box, Button, Divider, Stack } from '@mui/material'
 import React from 'react'
 import VideoWithOverlay from '../components/VideoWithOverlay';
-import { ArrowRight } from '@mui/icons-material';
+import {  Work, WorkHistory, Contacts  } from "@mui/icons-material"
 import helloVideo from '../static/Hello.mp4';
 
 const HomePage = () => {
   return (
-    <Box display="flex" flexDirection={"column"} flexGrow={1} maxWidth="100vw" >
+    <Box display="flex" flexDirection={"column"} flexGrow={1} >
         <VideoWithOverlay videoSrc={helloVideo} title="Hello, I'm Konstantinos" subtitle="🖥️ Software Engineer | 💡 Electrical Engineer">
             <Box position="absolute" bottom={100} left="0" width="100%" >
-                <Box sx={{ display: "flex", justifyContent: "center", alignItems:"center"}}>
-                    <Button variant='contained' href="#projects" type='button' startIcon={<ArrowRight />} >See More</Button>
-                </Box>
+                <Stack display="flex"justifyContent="center" direction="row" spacing={4} divider={<Divider  orientation="vertical" flexItem />}>
+                    <Button variant='contained' href="#projects" type='button' startIcon={<Work />} >Projects</Button>
+                    <Button variant='contained' href="#experience" type='button' startIcon={<WorkHistory />} >Experience</Button>
+                    <Button variant='contained' href="#contact" type='button' startIcon={<Contacts />} >Contact</Button>
+                </Stack>
             </Box>
         </VideoWithOverlay>
     </Box>

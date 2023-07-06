@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
         window.open(project.link, "_blank")
     }
     return (
-        <Card sx={{ display: 'flex', height: "100%", minWidth: "20rem", justifyContent: "space-between"}} >
+        <Card sx={{ display: 'flex', height: "100%",  justifyContent: "space-between"}} raised >
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography variant='h5' fontWeight="bold" >{project.title}</Typography>

@@ -24,7 +24,7 @@ const Links = [
         href: "#experience",
         icon: <WorkHistory />,
         pageComponent: <ExperiencePage />,
-        underDev: true
+        underDev: false
     },
     {
         name: "Contact Me",

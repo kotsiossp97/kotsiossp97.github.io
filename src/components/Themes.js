@@ -8,6 +8,7 @@ const myPalette = {
 
 export const darkTheme = responsiveFontSizes(createTheme({
     typography: {
+        fontFamily: "Montserrat",
         h4:{
             color: myPalette.primary
         },
@@ -28,6 +29,7 @@ export const darkTheme = responsiveFontSizes(createTheme({
 
 export const lightTheme = responsiveFontSizes(createTheme({
     typography: {
+        fontFamily: "Montserrat",
         h4:{
             color: "black"
         },
