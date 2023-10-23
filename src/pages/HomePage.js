@@ -9,10 +9,10 @@ const HomePage = () => {
     <Box display="flex" flexDirection={"column"} flexGrow={1} >
         <VideoWithOverlay videoSrc={helloVideo} title="Hello, I'm Konstantinos" subtitle="🖥️ Software Engineer | 💡 Electrical Engineer">
             <Box position="absolute" bottom={100} left="0" width="100%" >
-                <Stack display="flex"justifyContent="center" direction="row" spacing={4} divider={<Divider  orientation="vertical" flexItem />}>
+                <Stack display="flex"justifyContent="center" direction="row" spacing={{xs:.5, md:3, lg: 5}} divider={<Divider  orientation="vertical" flexItem />}>
                     <Button variant='contained' href="#projects" type='button' startIcon={<Work />} >Projects</Button>
                     <Button variant='contained' href="#experience" type='button' startIcon={<WorkHistory />} >Experience</Button>
-                    <Button variant='contained' href="#contact" type='button' startIcon={<Contacts />} >Contact</Button>
+                    <Button variant='contained' href="#contactme" type='button' startIcon={<Contacts />} >Contact</Button>
                 </Stack>
             </Box>
         </VideoWithOverlay>

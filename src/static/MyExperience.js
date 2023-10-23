@@ -1,6 +1,16 @@
 
 const MyExperience = [
     {
+        title: "Frontend Developer",
+        company: "Bernhard Schulte Shipmanagement (BSM)",
+        from: "October, 2023",
+        to: "Today",
+        location: "Limassol, Cyprus",
+        description: "Front-End development using React, TypeScript, and SharePoint. My work involves creating user-friendly interfaces and applications within SharePoint, collaborating with teams to ensure integration and responsiveness.",
+        type: "Full-time",
+        image: "bsm.jpeg"
+    },
+    {
         title: "Software Engineer",
         company: "Amdocs",
         from: "November, 2021",
@@ -10,7 +20,7 @@ const MyExperience = [
         code and testing code changes. Active scrum member always seeking to help others in the 
         team. My scrum obtained a number of high performing and high excellence awards.`,
         type: "Full-time",
-        image: "https://media.licdn.com/dms/image/D4D0BAQHl00ZjxIp_kw/company-logo_100_100/0/1688279976403?e=1696464000&v=beta&t=0e_GIZ2zAN2CgFIB8rV4O8K9bBYW62qE7dMEHsJp7UI",
+        image: "amdocs.jpeg",
     },
     {
         title: "Special Scientist",
@@ -22,7 +32,7 @@ const MyExperience = [
         systems. Developed web applications and programmed microcontrollers during working on 
         this role.`,
         type: "Full-time",
-        image: "https://media.licdn.com/dms/image/C560BAQG9Hymq7WIt-Q/company-logo_100_100/0/1519855995184?e=1696464000&v=beta&t=wJI4-VsEwZ9kgeWJuteYAd4be0W96y362KXenFotJsQ",
+        image: "ucy.jpeg",
     },
     {
         title: "Shift Lead",
@@ -33,7 +43,7 @@ const MyExperience = [
         description: `Preparing coffee-based beverages. Managing the shop and a team of baristas during shifts, as 
         well as providing customer service.`,
         type: "Part-time",
-        image: "https://media.licdn.com/dms/image/C560BAQFLDqtTqLXWfQ/company-logo_200_200/0/1663686443062?e=1696464000&v=beta&t=P9bISfzL0WF8mB6ewVELHtKGUpT22AHyaizBLk6XgbY"
+        image: "costa.jpeg"
     }
 ]
 
