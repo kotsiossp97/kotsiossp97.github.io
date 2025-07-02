@@ -1,7 +1,8 @@
-import PythonImg from "../static/python.png";
-import LPMCD from "../static/lmcd.jpg";
-import FS22Dir from "../static/fs22DirChanger.png";
-import CafeScreen from "../static/cafeScreenshot.png";
+import PythonImg from "@/assets/python.png";
+import LPMCD from "@/assets/lmcd.jpg";
+import FS22Dir from "@/assets/fs22DirChanger.png";
+import CafeScreen from "@/assets/cafeScreenshot.png";
+import Carwash from "@/assets/carwash.png";
 
 export const MyProjects = [
   {
@@ -52,6 +53,16 @@ export const MyProjects = [
     image:
       "https://raw.githubusercontent.com/kotsiossp97/simracing-fov-calculator/main/screenshots/screen1.png",
   },
+  {
+    title: "The Carwash Web App",
+    description:
+      "A complete web application for a carwash business, built with ReactJS and TypeScript. It includes features like online booking, service management, and scheduling.",
+    link: "https://carwash.cy",
+    date: "December 21, 2024",
+    image: Carwash,
+  },
 ];
+
+export type IProject = (typeof MyProjects)[number];
 
 // "https://raw.githubusercontent.com/kotsiossp97/fs22-mod-directory-changer/master/screenshots/screen1.png"

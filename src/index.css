@@ -1,13 +1,13 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   height: 100%;
 }
 
-#root{
+#root {
   display: flex;
   flex-flow: column;
   width: 100%;
