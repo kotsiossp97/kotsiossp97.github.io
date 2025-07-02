@@ -8,10 +8,14 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import ProjectCodingImg from "../static/projectCoding.jpg";
+import ProjectCodingImg from "@/assets/projectCoding.jpg";
+import type { IProject } from "@/static/MyProjects";
 
-const ProjectCard = (props) => {
-  const project = props.project;
+interface IProjectCardProps {
+  project: IProject;
+}
+
+const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
   const img = project?.image ? project.image : ProjectCodingImg;
 
   const handleButtonClick = () => {
@@ -21,7 +25,7 @@ const ProjectCard = (props) => {
     <Card
       sx={{
         display: "flex",
-        // height: "100%",
+        height: "100%",
         justifyContent: "space-between",
         flexDirection: {
           xs: "column-reverse",
