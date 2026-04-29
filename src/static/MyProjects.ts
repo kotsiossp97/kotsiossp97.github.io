@@ -1,7 +1,7 @@
 import PythonImg from "@/assets/python.png";
 import LPMCD from "@/assets/lmcd.jpg";
 import FS22Dir from "@/assets/fs22DirChanger.png";
-import CafeScreen from "@/assets/cafeScreenshot.png";
+import CafeScreen from "@/assets/cafeScreenshot.webp";
 import Carwash from "@/assets/carwash.png";
 
 export const MyProjects = [
