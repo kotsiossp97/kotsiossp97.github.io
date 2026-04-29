@@ -14,7 +14,7 @@ import SocialLinks from "@/static/SocialLinks";
 const Footer: React.FC = () => {
   const handleLinkClick = (
     _: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    href: string
+    href: string,
   ) => {
     window.open(href, "_blank");
   };
@@ -23,7 +23,10 @@ const Footer: React.FC = () => {
     <AppBar position="fixed" sx={{ bottom: 0, top: "auto" }}>
       <Toolbar>
         <Box sx={{ display: "flex", flexGrow: 1, justifyContent: "center" }}>
-          <Stack direction="column" justifyContent="center" alignItems="center">
+          <Stack
+            direction="column"
+            sx={{ justifyContent: "center", alignItems: "center" }}
+          >
             <Stack direction="row">
               {SocialLinks.map((link) => (
                 <Tooltip key={link.name} title={link.tooltip} arrow>

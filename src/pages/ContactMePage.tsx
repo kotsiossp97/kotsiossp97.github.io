@@ -26,7 +26,7 @@ const ContactMePage: React.FC = () => {
       <Fade in timeout={1000}>
         <Box>
           {/* Header Section */}
-          <Box textAlign="center" mb={6} mt={3}>
+          <Box sx={{ textAlign: "center", mb: 6, mt: 3 }}>
             <Typography
               variant="h6"
               color="text.secondary"
@@ -37,7 +37,7 @@ const ContactMePage: React.FC = () => {
             </Typography>
           </Box>
 
-          <Box mb={6}>
+          <Box sx={{ mb: 6 }}>
             {/* Personal Info Card */}
             <Card
               elevation={4}
@@ -58,7 +58,7 @@ const ContactMePage: React.FC = () => {
               }}
             >
               <CardContent sx={{ p: 4 }}>
-                <Box display="flex" alignItems="center" mb={3}>
+                <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
                   <Avatar
                     sx={{
                       bgcolor: theme.palette.primary.main,
@@ -71,7 +71,7 @@ const ContactMePage: React.FC = () => {
                     <Person fontSize="large" />
                   </Avatar>
                   <Box>
-                    <Typography variant="h5" fontWeight="bold">
+                    <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                       {MyDetails.name} {MyDetails.surname}
                     </Typography>
                     <Chip
@@ -84,24 +84,23 @@ const ContactMePage: React.FC = () => {
                 </Box>
 
                 <Stack spacing={2}>
-                  <Box display="flex" alignItems="center">
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
                     <Email color="primary" sx={{ mr: 2 }} />
                     <Typography variant="body1">{MyDetails.email}</Typography>
                   </Box>
-                  <Box display="flex" alignItems="center">
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
                     <LocationOn color="primary" sx={{ mr: 2 }} />
                     <Typography variant="body1">
                       {MyDetails.location}
                     </Typography>
                   </Box>
-                  <Box display="flex" alignItems="center">
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
                     <Computer color="primary" sx={{ mr: 2 }} />
 
                     <Stack
                       direction={"row"}
                       spacing={0.5}
-                      flexWrap={"wrap"}
-                      rowGap={1}
+                      sx={{ flexWrap: "wrap", rowGap: 1 }}
                       useFlexGap
                     >
                       {MyDetails.coding.map((lang, i) => (
@@ -122,7 +121,7 @@ const ContactMePage: React.FC = () => {
                 <Typography
                   variant="body2"
                   color="text.secondary"
-                  lineHeight={1.6}
+                  sx={{ lineHeight: 1.6 }}
                 >
                   Passionate about creating innovative solutions and always
                   eager to learn new technologies. Whether you have a project in
@@ -133,7 +132,7 @@ const ContactMePage: React.FC = () => {
           </Box>
 
           {/* Social Media Links Card */}
-          <Box mb={6}>
+          <Box sx={{ mb: 6 }}>
             <Card
               elevation={4}
               sx={{
@@ -154,24 +153,24 @@ const ContactMePage: React.FC = () => {
               <CardContent sx={{ p: 4 }}>
                 <Typography
                   variant="h5"
-                  fontWeight="bold"
                   gutterBottom
-                  textAlign="center"
-                  mb={3}
+                  sx={{ mb: 3, textAlign: "center", fontWeight: "bold" }}
                 >
                   Connect With Me
                 </Typography>
 
                 <Stack
-                  justifyContent={"center"}
-                  alignItems={"stretch"}
+                  sx={{
+                    justifyContent: "center",
+                    alignItems: "stretch",
+                    flexWrap: "wrap",
+                  }}
                   useFlexGap
                   direction={"row"}
                   spacing={3}
-                  flexWrap={"wrap"}
                 >
                   {SocialLinks.map((link, index) => (
-                    <Box key={link.name} flex={1}>
+                    <Box key={link.name} sx={{ flex: 1 }}>
                       <Fade in timeout={1500 + index * 500}>
                         <Paper
                           elevation={2}
@@ -213,8 +212,10 @@ const ContactMePage: React.FC = () => {
                           </IconButton>
                           <Typography
                             variant="body2"
-                            fontWeight="medium"
-                            textTransform="capitalize"
+                            sx={{
+                              fontWeight: "medium",
+                              textTransform: "capitalize",
+                            }}
                             color="text.primary"
                           >
                             {link.name}
@@ -240,7 +241,7 @@ const ContactMePage: React.FC = () => {
           </Box>
 
           {/* Call to Action Section */}
-          <Box textAlign="center">
+          <Box sx={{ textAlign: "center" }}>
             <Paper
               elevation={3}
               sx={{
@@ -249,10 +250,10 @@ const ContactMePage: React.FC = () => {
                 border: `1px solid ${theme.palette.primary.main}30`,
               }}
             >
-              <Typography variant="h5" fontWeight="bold" gutterBottom>
+              <Typography variant="h5" sx={{ fontWeight: "bold" }} gutterBottom>
                 Ready to Start Something Amazing?
               </Typography>
-              <Typography variant="body1" color="text.secondary" mb={3}>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
                 I'm currently available for new opportunities and
                 collaborations. Let's build something great together!
               </Typography>
@@ -281,9 +282,11 @@ const ContactMePage: React.FC = () => {
                 >
                   <Typography
                     variant="h6"
-                    fontWeight="bold"
-                    alignItems={"center"}
-                    display="flex"
+                    sx={{
+                      fontWeight: "bold",
+                      alignItems: "center",
+                      display: "flex",
+                    }}
                   >
                     <Email fontSize="large" sx={{ mr: 1 }} />
                     Send Me an Email

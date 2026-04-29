@@ -16,7 +16,7 @@ function App() {
     <ThemeProvider theme={getMuiTheme()}>
       <CssBaseline />
 
-      <Box display={"flex"} flexDirection={"column"} height={"100%"}>
+      <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
         <Navbar />
 
         <MainContent>

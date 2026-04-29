@@ -27,11 +27,11 @@ export const ContextProvider: React.FC<React.PropsWithChildren> = ({
   children,
 }) => {
   const hash = useLocation();
-
   const [theme, setTheme] = useState("system");
-  const [activeLink, setActiveLink] = useState(currentUrlHash(hash));
+  const [activeLink, setActiveLink] = useState(() => currentUrlHash(hash));
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveLink(currentUrlHash(hash));
   }, [hash]);
 
@@ -71,4 +71,5 @@ export const ContextProvider: React.FC<React.PropsWithChildren> = ({
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useStateContext = () => useContext(StateContext);

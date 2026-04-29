@@ -11,7 +11,7 @@ interface IVideoWithOverlayProps {
 
 const VideoWithOverlay: React.FC<IVideoWithOverlayProps> = (props) => {
   const [screenSize, setScreenSize] = useState(0);
-  const [showVideo, setShowVideo] = useState(false);
+  // const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -22,23 +22,23 @@ const VideoWithOverlay: React.FC<IVideoWithOverlayProps> = (props) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    if (screenSize <= 1000) {
-      setShowVideo(false);
-    } else {
-      setShowVideo(true);
-    }
-  }, [screenSize]);
+  // useEffect(() => {
+  //   setShowVideo(screenSize > 1000);
+  // }, [screenSize]);
+
+  const showVideo = screenSize > 1000;
 
   return (
     <Box
-      display="flex"
-      alignItems="center"
-      flexGrow={1}
-      flexDirection="column"
-      bgcolor="#121212"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        flexGrow: 1,
+        bgcolor: "#121212",
+      }}
     >
-      <Box flexGrow={1} display="flex" alignItems="center">
+      <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
         {showVideo && (
           <video
             width="100%"
@@ -58,15 +58,22 @@ const VideoWithOverlay: React.FC<IVideoWithOverlayProps> = (props) => {
               alt="code"
               height="100%"
               width="100%"
-              style={{ objectFit: "cover", overflow: "hidden" }}
+              style={{
+                objectFit: "cover",
+                overflow: "hidden",
+                width: "100%",
+                height: "100%",
+              }}
             ></img>
             <Box
-              display="flex"
-              justifyContent="center"
-              position="absolute"
-              bottom="50%"
-              left="0"
-              width="100%"
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                position: "absolute",
+                bottom: "50%",
+                left: "0",
+                width: "100%",
+              }}
             >
               <Box
                 sx={{
@@ -77,7 +84,7 @@ const VideoWithOverlay: React.FC<IVideoWithOverlayProps> = (props) => {
                   className="glow"
                   variant="h3"
                   color="primary.main"
-                  fontWeight="bold"
+                  sx={{ fontWeight: "bold" }}
                 >
                   {props.title}
                 </Typography>

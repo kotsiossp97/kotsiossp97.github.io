@@ -9,8 +9,6 @@ const useLocation = () => {
 
   useEffect(() => {
     window.addEventListener("hashchange", handleHashChange);
-
-    // return window.removeEventListener("hashchange", handleHashChange)
   }, []);
 
   return hash;

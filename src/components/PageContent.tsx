@@ -11,14 +11,16 @@ const PageContent: React.FC<IPageContentProps> = ({ title, children }) => {
       {title && (
         <>
           <Typography
-            color="primary.main"
-            fontWeight="bold"
+            color="primary"
             variant="h3"
             gutterBottom
+            sx={{
+              fontWeight: "bold",
+            }}
           >
             {title}
           </Typography>
-          <Divider />
+          <Divider sx={{ mb: 3 }} />
         </>
       )}
       {children}

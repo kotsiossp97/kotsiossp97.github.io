@@ -3,7 +3,12 @@ import React from "react";
 
 const MainContent: React.FC<React.PropsWithChildren> = (props) => {
   return (
-    <Box display="flex" flexGrow={1}>
+    <Box
+      sx={{
+        display: "flex",
+        flexGrow: 1,
+      }}
+    >
       {props.children}
     </Box>
   );

@@ -35,19 +35,21 @@ const Navbar: React.FC = () => {
         </IconButton>
         <Box sx={{ flexGrow: 1 }}>
           <Typography
+            variant="h4"
             component="a"
             href="#"
-            fontFamily="Alkatra"
-            sx={{ textDecoration: "none" }}
-            marginRight={2}
-            variant="h4"
+            sx={{
+              textDecoration: "none",
+              fontFamily: "Alkatra",
+              marginRight: 2,
+            }}
           >
             My Portfolio
           </Typography>
         </Box>
 
         <Box sx={{ flexGrow: 0 }}>
-          <Typography fontFamily="Alkatra" align="right" variant="h4">
+          <Typography sx={{ fontFamily: "Alkatra" }} align="right" variant="h4">
             Konstantinos Andreou
           </Typography>
         </Box>

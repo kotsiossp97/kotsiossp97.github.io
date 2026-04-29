@@ -12,13 +12,15 @@ const UnderDevSwitch: React.FC<IUnderDevSwitchProps> = (props) => {
 
   return isUnderDev ? (
     <Box
-      flexGrow={1}
-      alignItems="center"
-      display="flex"
-      justifyContent="center"
-      flexDirection="column"
+      sx={{
+        flexGrow: 1,
+        alignItems: "center",
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+      }}
     >
-      <Typography variant="h2" textAlign="center">
+      <Typography variant="h2" sx={{ textAlign: "center" }}>
         🚧 Under development... 🚧
       </Typography>
     </Box>

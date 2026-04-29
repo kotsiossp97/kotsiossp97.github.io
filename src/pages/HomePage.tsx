@@ -7,19 +7,22 @@ import helloVideo from "@/assets/Hello.mp4";
 const HomePage: React.FC = () => {
   return (
     <Fade in timeout={1000}>
-      <Box display="flex" flexDirection={"column"} flexGrow={1}>
+      <Box sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
         <VideoWithOverlay
           videoSrc={helloVideo}
           title="Hello, I'm Konstantinos"
           subtitle="🖥️ Software Engineer | 💡 Electrical Engineer"
         >
-          <Box position="absolute" bottom={100} left="0" width="100%">
+          <Box
+            sx={{ position: "absolute", bottom: 100, left: "0", width: "100%" }}
+          >
             <Stack
-              display="flex"
-              justifyContent="center"
+              sx={{
+                justifyContent: "center",
+                flexWrap: "wrap",
+                rowGap: 1,
+              }}
               direction="row"
-              flexWrap={"wrap"}
-              rowGap={1}
               spacing={{ xs: 0.5, md: 3, lg: 5 }}
               divider={<Divider orientation="vertical" flexItem />}
             >

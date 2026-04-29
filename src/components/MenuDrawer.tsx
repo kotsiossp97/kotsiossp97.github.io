@@ -43,7 +43,7 @@ const MenuDrawer: React.FC<IMenuDrawerProps> = (props) => {
 
   const handleThemeChange = (
     _: React.MouseEvent<HTMLElement, MouseEvent>,
-    newTheme: string
+    newTheme: string,
   ) => {
     if (newTheme !== null) {
       setTheme(newTheme);
@@ -52,7 +52,7 @@ const MenuDrawer: React.FC<IMenuDrawerProps> = (props) => {
 
   const handleLinkClick = (
     _: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    newIndex: number
+    newIndex: number,
   ) => {
     setActiveLink(newIndex);
     props.closeHandler();
@@ -72,9 +72,12 @@ const MenuDrawer: React.FC<IMenuDrawerProps> = (props) => {
         <List>
           <ListItem disablePadding>
             <Box
-              sx={{ display: "flex", width: "100%" }}
-              alignItems="center"
-              justifyContent="space-between"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "100%",
+              }}
             >
               <Typography>NAVIGATION</Typography>
               <IconButton onClick={handleClose}>

@@ -37,7 +37,12 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
     >
       <Box sx={{ display: "flex", flexDirection: "column", flex: 2 }}>
         <CardContent sx={{ flex: "1" }}>
-          <Typography variant="h5" fontWeight="bold">
+          <Typography
+            variant="h5"
+            sx={{
+              fontWeight: "bold",
+            }}
+          >
             {project.title}
           </Typography>
           <Typography variant="subtitle2" gutterBottom>

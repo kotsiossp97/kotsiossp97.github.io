@@ -33,31 +33,33 @@ const ExperienceCard: React.FC<IExperienceCardProps> = (props) => {
     >
       <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
         <CardContent>
-          <Typography variant="h5" fontWeight="bold" gutterBottom>
+          <Typography variant="h5" sx={{ fontWeight: "bold" }} gutterBottom>
             {job.title}
           </Typography>
           <Divider />
           <Stack
-            alignItems="center"
-            justifyContent={"left"}
             useFlexGap
             direction="row"
             spacing={1}
-            rowGap={1}
-            flexWrap={"wrap"}
             divider={<Divider orientation="vertical" flexItem />}
-            marginY={2}
+            sx={{
+              justifyContent: "left",
+              alignItems: "center",
+              flexWrap: "wrap",
+              marginY: 2,
+              rowGap: 1,
+            }}
           >
-            <Typography fontSize={"70%"} variant="subtitle2">
+            <Typography sx={{ fontSize: "70%" }} variant="subtitle2">
               {job.company}
             </Typography>
-            <Typography fontSize={"70%"} variant="subtitle2">
+            <Typography sx={{ fontSize: "70%" }} variant="subtitle2">
               {job.type}
             </Typography>
-            <Typography fontSize={"70%"} variant="subtitle2">
+            <Typography sx={{ fontSize: "70%" }} variant="subtitle2">
               {job.from} - {job.to}
             </Typography>
-            <Typography fontSize={"70%"} variant="subtitle2">
+            <Typography sx={{ fontSize: "70%" }} variant="subtitle2">
               {job.location}
             </Typography>
           </Stack>
