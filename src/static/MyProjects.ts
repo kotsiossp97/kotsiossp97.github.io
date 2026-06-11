@@ -3,6 +3,7 @@ import LPMCD from "@/assets/lmcd.jpg";
 import FS22Dir from "@/assets/fs22DirChanger.png";
 import CafeScreen from "@/assets/cafeScreenshot.webp";
 import Carwash from "@/assets/carwash.png";
+import Powerbeacon from "@/assets/powerbeacon.png";
 
 export const MyProjects = [
   {
@@ -60,6 +61,14 @@ export const MyProjects = [
     link: "https://carwash.cy",
     date: "December 21, 2024",
     image: Carwash,
+  },
+  {
+    title: "PowerBeacon",
+    description:
+      "PowerBeacon is my first open-source project: A self-hosted Wake-on-LAN orchestration platform built around three layers: a FastAPI backend, a React frontend, and one or more Go agents that run close to the target LAN.",
+    link: "https://kotsiossp97.github.io/powerbeacon/",
+    date: "March 14, 2026",
+    image: Powerbeacon,
   },
 ];
 
