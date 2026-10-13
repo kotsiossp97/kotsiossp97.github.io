@@ -1,8 +1,8 @@
-import React from "react";
-import { Box, Button, Divider, Fade, Stack } from "@mui/material";
-import VideoWithOverlay from "@/components/VideoWithOverlay";
-import { Work, WorkHistory, Contacts } from "@mui/icons-material";
 import helloVideo from "@/assets/Hello.mp4";
+import VideoWithOverlay from "@/components/VideoWithOverlay";
+import { Contacts, School, Work, WorkHistory } from "@mui/icons-material";
+import { Box, Button, Divider, Fade, Stack } from "@mui/material";
+import React from "react";
 
 const HomePage: React.FC = () => {
   return (
@@ -41,6 +41,14 @@ const HomePage: React.FC = () => {
                 startIcon={<WorkHistory />}
               >
                 Experience
+              </Button>
+              <Button
+                variant="contained"
+                href="#education"
+                type="button"
+                startIcon={<School />}
+              >
+                Education
               </Button>
               <Button
                 variant="contained"

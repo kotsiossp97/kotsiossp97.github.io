@@ -4,6 +4,7 @@ import FS22Dir from "@/assets/fs22DirChanger.png";
 import CafeScreen from "@/assets/cafeScreenshot.webp";
 import Carwash from "@/assets/carwash.png";
 import Powerbeacon from "@/assets/powerbeacon.png";
+import WeatherWidget from "@/assets/weatherWidget.png";
 
 export const MyProjects = [
   {
@@ -70,7 +71,15 @@ export const MyProjects = [
     date: "March 14, 2026",
     image: Powerbeacon,
   },
-];
+  {
+    title: "Openmeteo Weather Widget",
+    description:
+      "Framework-agnostic weather widget with a small embeddable API for bundlers and plain HTML pages. It ships ESM, CJS, a CDN-friendly UMD bundle, TypeScript declarations, and a generated stylesheet. Published in NPM registry and jsdelivr CDN, with over 2k hits/month.",
+    link: "https://github.com/kotsiossp97/weather-widget",
+    date: "April 29, 2026",
+    image: WeatherWidget,
+  }
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
 export type IProject = (typeof MyProjects)[number];
 

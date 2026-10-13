@@ -1,8 +1,9 @@
 import ContactMePage from "@/pages/ContactMePage";
+import StudiesPage from "@/pages/EducationPage";
 import ExperiencePage from "@/pages/ExperiencePage";
 import HomePage from "@/pages/HomePage";
 import ProjectsPage from "@/pages/ProjectsPage";
-import { Home, Work, WorkHistory, Contacts } from "@mui/icons-material";
+import { Contacts, Home, School, Work, WorkHistory } from "@mui/icons-material";
 
 const Links = [
   {
@@ -24,6 +25,13 @@ const Links = [
     href: "#experience",
     icon: <WorkHistory />,
     pageComponent: <ExperiencePage />,
+    underDev: false,
+  },
+  {
+    name: "Education",
+    href: "#education",
+    icon: <School />,
+    pageComponent: <StudiesPage />,
     underDev: false,
   },
   {
